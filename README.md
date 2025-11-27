@@ -18,16 +18,16 @@ Terraform-Docs
     e. Resource Management and Scale
 
 ## Terrform Lifcycle / WorkFlow
-1. Initialization - terraform init
+1. Initialization - ```terraform init```
     - Sets up the working directory. It downloads the required providers (plugins for interacting with cloud APIs), sets up the backend (where the state file is stored), and initializes any modules.
 
-2. Planning	- terraform plan
+2. Planning	- ```terraform plan```
     - Creates an execution plan. Terraform first refreshes the state (compares the state file to the real-world infrastructure), then compares the real state to your configuration files, and outputs exactly what actions (create, change, destroy) will be performed. This is a safe preview.
 
-3. Application - terraform apply
+3. Application - ```terraform apply```
     - Executes the plan created in the previous step. It provisions or modifies the infrastructure resources in the correct order, handles dependencies, and updates the state file to reflect the new real-world infrastructure state.
 
-4. Destruction - terraform destroy
+4. Destruction - ```terraform destroy```
     - Removes all the infrastructure resources managed by the current Terraform configuration. It generates a destruction plan and executes it, completely deprovisioning the resources. This command should be used with extreme caution.
 
 
